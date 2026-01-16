@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moon Landing AR Experience</title>
+
+  <!-- Model Viewer -->
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      font-family: Arial, sans-serif;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+    }
+
+    .title {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="title">
+    🌕 Apollo 11 – Moon Landing (1969)
+  </div>
+
+  <model-viewer
+    src="https://drive.google.com/uc?export=download&id=1X5CyE3ShGGV00bincgR59suUXD7uCgOJ"
+    alt="Moon Landing Scene"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1.1"
+    camera-orbit="0deg 75deg 4m"
+    min-camera-orbit="auto auto 2m"
+    max-camera-orbit="auto auto 8m"
+    environment-image="neutral"
+  >
+  </model-viewer>
+
+</body>
+</html>
